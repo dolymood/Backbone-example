@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户列表以及详细信息</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href='css/app.css'>
+	<!-- 公共库 -->
+    <script type="text/javascript" src='javascripts/jquery/jquery.js'></script>
+    <script type="text/javascript" src='javascripts/underscore/underscore.js'></script>
+    <script type="text/javascript" src='javascripts/backbone/backbone.js'></script>
+	<!-- 本地存储库 -->
+	<script type="text/javascript" src="javascripts/backbone-localstorage.js"></script>
+	<!--应用库-->
+	<script type="text/javascript" src='javascripts/app.js'></script>
+</head>
+<body>
+	<script type="text/template" id="list-template">
+	    <a href="#add">增加新用户</a>
+		<ul id="list">
+			
+		</ul>
+	</script>
+	<script type="text/template" id="user-item-template">
+	    <a class="viewUser" href="javascript:;"><%= username %></a>
+		<a class="removeUser" href="javascript:;">删除</a>
+	</script>
+	<script type="text/template" id="user-template">
+		<p>编号<%= userid %>：</p>
+		<a href="javascript:;" class="editUser">名字：<%= username %></a>
+	</script>
+	<script type="text/template" id="modify-template">
+	    <input type="text" value="<%= username %>">
+	    <a class="add" href="javascript:;"><%= !username ? "增加":"修改" %></a>
+	</script>
+</body>
+</html>
